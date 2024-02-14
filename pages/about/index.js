@@ -25,18 +25,18 @@ export const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 key="html5" />,
+          <FaCss3 key="css3" />,
+          <FaJs key="js" />,
+          <FaReact key="react" />,
+          <SiNextdotjs key="nextjs" />,
+          <SiFramer key="framer" />,
+          <FaWordpress key="wordpress" />,
         ],
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [<FaFigma key="fafigma"/>, <SiAdobexd key="siadobexd"/>, <SiAdobephotoshop key="siadobephotoshop"/>],
       },
     ],
   },
@@ -137,7 +137,7 @@ const About = () => {
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
           >
             10 years ago, I began my journey as a tech specialist. Since then, 
-            I've designed mechatronic, industrial, and AI products, counsulted for startups, 
+            I&apos;ve designed mechatronic, industrial, and AI products, counsulted for startups, 
             and collaborated on digital products for business and consumer use.
           </motion.p>
           {/* counters */}

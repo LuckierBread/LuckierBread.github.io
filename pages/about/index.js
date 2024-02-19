@@ -2,12 +2,8 @@ import React, { useState } from 'react';
 
 // icons
 import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma,
+  FaC
+  FaPython,
 } from 'react-icons/fa';
 
 import {
@@ -15,6 +11,7 @@ import {
   SiFramer,
   SiAdobexd,
   SiAdobephotoshop,
+  SiCplusplus
 } from 'react-icons/si';
 
 //  about data
@@ -36,37 +33,46 @@ export const aboutData = [
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma key="fafigma"/>, <SiAdobexd key="siadobexd"/>, <SiAdobephotoshop key="siadobephotoshop"/>],
+        icons: [
+        <FaFigma key="OnShape"/>,
+        <SiAdobexd key="siadobexd"/>,
+         <SiAdobephotoshop key="siadobephotoshop"/>
+        ],
       },
     ],
   },
-  {
-    title: 'awards',
-    info: [
-      {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
-      },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
-      },
-    ],
-  },
+  // Add back in when you have more awards
+  // {
+  //   title: 'awards',
+  //   info: [
+  //     {
+  //       title: 'Webby Awa - Honoree',
+  //       stage: '2011 - 2012',
+  //     },
+  //     {
+  //       title: 'Adobe Design Achievement Awards - Finalist',
+  //       stage: '2009 - 2010',
+  //     },
+  //   ],
+  // },
   {
     title: 'experience',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: 'Machine Learning Engineer - FreeLance',
+        stage: '2023 - Present',
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
+        title: 'Design Engineer - Cavalier Industries Ltd',
+        stage: '2022 - 2023',
       },
       {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
+        title: 'Industrial Designer - International Cooling Tower Inc',
+        stage: '2021 - 2022',
+      },
+      {
+        title: 'Mechatronic Design Technologist - Lakewood Systems Ltd',
+        stage: '2017 - 2021',
       },
     ],
   },
@@ -74,16 +80,36 @@ export const aboutData = [
     title: 'credentials',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
+        title: 'Sequence Models - DeepLearning.AI',
+        stage: '2024',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
+        title: 'Convolutional Neural Networks - Coursera',
+        stage: '2023',
       },
       {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
+        title: 'Hyperparameter Tuning, Regularization and Optimization - Coursera',
+        stage: '2023',
+      },
+      {
+        title: 'Structuring Machine Learning Projects - Coursera',
+        stage: '2022',
+      },
+      {
+        title: 'Advanced Learning Algorithms - Coursera',
+        stage: '2022',
+      },
+      {
+        title: 'Supervised Machine Learning: Regression and Classification - Coursera',
+        stage: '2022',
+      },
+      {
+        title: 'Neural Networks and Deep Learning - Coursera',
+        stage: '2022',
+      },
+      {
+        title: 'Machine Learning - Coursera',
+        stage: '2022',
       },
     ],
   },
@@ -161,28 +187,28 @@ const About = () => {
               {/* clients */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={250} duration={5} /> +
+                  <CountUp start={0} end={25} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Satisfied clients
+                  ML Model Archetectures
                 </div>
               </div>
               {/* projects */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={650} duration={5} /> +
+                  <CountUp start={0} end={9} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Finished projects
+                  ML Specialized certificates
                 </div>
               </div>
               {/* awards */}
               <div className='relative flex-1'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={8} duration={5} /> +
+                  <CountUp start={0} end={30} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Winning awards
+                  Projects Completed
                 </div>
               </div>
             </div>

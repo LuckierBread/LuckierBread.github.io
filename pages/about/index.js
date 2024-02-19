@@ -8,6 +8,7 @@ import {
   FaReact,
   FaWordpress,
   FaPython,
+  FaFigma,
 } from 'react-icons/fa';
 
 import {

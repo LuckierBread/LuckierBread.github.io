@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 
 // icons
 import {
-  FaC
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaReact,
+  FaWordpress,
   FaPython,
 } from 'react-icons/fa';
 
@@ -34,9 +38,16 @@ export const aboutData = [
       {
         title: 'UI/UX Design',
         icons: [
-        <FaFigma key="OnShape"/>,
+        <FaFigma key="FaFigma"/>,
         <SiAdobexd key="siadobexd"/>,
          <SiAdobephotoshop key="siadobephotoshop"/>
+        ],
+      },
+      {
+        title: 'Machine Learning',
+        icons: [
+        <FaPython key="python"/>,
+        <SiCplusplus key="Cplusplus"/>,
         ],
       },
     ],

@@ -21,7 +21,7 @@ const Header = () => {
               alt=''
               priority={true}
             /> */}
-            <a>Michael Ursuliak</a>
+            <a style={{fontSize:'24px'}}><span style={{fontWeight:'bold'}}>Michael</span> Ursuliak</a>
           </Link>
           {/* socials */}
           <Socials />

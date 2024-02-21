@@ -21,7 +21,7 @@ const Header = () => {
               alt=''
               priority={true}
             /> */}
-            <a>Michael Ursuliak<a>
+            <a>Michael Ursuliak</a>
           </Link>
           {/* socials */}
           <Socials />

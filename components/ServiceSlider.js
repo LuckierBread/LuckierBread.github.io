@@ -42,9 +42,14 @@ export const serviceData = [
     description: 'Create unique and original content with generative AI models that learn and adapt to your brand.',
   },
   {
-    icon: <RxRocket />,
+    icon: <FaRocket />,
     title: 'Predictive Analytics',
     description: 'Leverage predictive analytics to forecast trends, identify opportunities, and mitigate risks.',
+  },
+  {
+    icon: <FaMagnifyingGlass />,
+    title: 'Data Insights',
+    description: 'Uncover hidden patterns and insights in your data to make informed decisions and drive innovation.',
   },
 ];
 

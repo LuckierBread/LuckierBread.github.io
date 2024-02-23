@@ -6,17 +6,15 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
   FaPython,
-  FaFigma,
 } from 'react-icons/fa';
 
 import {
   SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
-  SiCplusplus
+  SiCplusplus,
+  SiScikitlearn,
+  SiTensorflow,
+  SiPytorch,
 } from 'react-icons/si';
 
 //  about data
@@ -32,23 +30,17 @@ export const aboutData = [
           <FaJs key="js" />,
           <FaReact key="react" />,
           <SiNextdotjs key="nextjs" />,
-          <SiFramer key="framer" />,
-          <FaWordpress key="wordpress" />,
         ],
       },
-      {
-        title: 'UI/UX Design',
-        icons: [
-        <FaFigma key="FaFigma"/>,
-        <SiAdobexd key="siadobexd"/>,
-         <SiAdobephotoshop key="siadobephotoshop"/>
-        ],
-      },
+
       {
         title: 'Machine Learning',
         icons: [
         <FaPython key="python"/>,
         <SiCplusplus key="Cplusplus"/>,
+        <SiScikitlearn key="Scikitlearn"/>,
+        <SiTensorflow key="Tensorflow"/>,
+        <SiPytorch key="Pytorch"/>,
         ],
       },
     ],
@@ -83,7 +75,7 @@ export const aboutData = [
         stage: '2021 - 2022',
       },
       {
-        title: 'Mechatronic Design Technologist - Lakewood Systems Ltd',
+        title: 'Mechatronic Designer - Lakewood Systems',
         stage: '2017 - 2021',
       },
     ],

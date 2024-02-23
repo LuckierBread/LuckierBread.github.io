@@ -26,12 +26,12 @@ export const serviceData = [
   {
     icon: <FaComments />,
     title: 'AI Chatbots',
-    description: 'Engage your customers with AI-powered chatbots that provide personalized experiences and drive sales.',
+    description: 'Engage your customers with AI-powered chatbots that personalize experiences and drive sales.',
   },
   {
     icon: <FaRobot />,
     title: 'Workflow Automation',
-    description: 'Automate repetitive tasks and streamline workflows to boost productivity and reduce operational costs.',
+    description: 'Automate repetitive tasks,streamline workflows, and boost productivity.',
   },
   {
     icon: <FaToolbox />,

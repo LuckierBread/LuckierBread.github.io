@@ -8,13 +8,13 @@ import 'swiper/css/pagination';
 
 // icons
 import {
-  RxCrop,
-  RxDesktop,
-  RxPencil2,
-  RxReader,
-  RxRocket,
-  RxArrowTopRight,
-} from 'react-icons/rx';
+  FaComments,
+  FaRobot,
+  FaToolbox,
+  FaLightbulb,
+  FaRocket,
+  FaMagnifyingGlass,
+} from 'react-icons/fa6';
 
 // import required modules
 import { FreeMode, Pagination } from 'swiper';
@@ -22,29 +22,29 @@ import { FreeMode, Pagination } from 'swiper';
 // service data
 export const serviceData = [
   {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <FaComments />,
+    title: 'AI Chatbots',
+    description: 'Engage your customers with AI-powered chatbots that provide personalized experiences and drive sales.',
   },
   {
-    icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <FaRobot />,
+    title: 'Workflow Automation',
+    description: 'Automate repetitive tasks and streamline workflows to boost productivity and reduce operational costs.',
   },
   {
-    icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <FaToolbox />,
+    title: 'Custom AI Tools',
+    description: 'Leverage custom AI tools to gain insights, make data-driven decisions, and drive business growth.',
   },
   {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <FaLightbulb />,
+    title: 'Generative AI',
+    description: 'Create unique and original content with generative AI models that learn and adapt to your brand.',
   },
   {
     icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Predictive Analytics',
+    description: 'Leverage predictive analytics to forecast trends, identify opportunities, and mitigate risks.',
   },
 ];
 

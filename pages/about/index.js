@@ -143,6 +143,7 @@ const About = () => {
         animate='show'
         exit='hidden'
         className='hidden xl:flex absolute bottom-0 -left-[370px]'
+        style={{zIndex: 1}}
       >
         <Avatar />
       </motion.div>
@@ -165,6 +166,7 @@ const About = () => {
             animate='show'
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
+            style={{zIndex: 2}}
           >
             10 years ago, I began my journey as a tech specialist. Since then, 
             I&apos;ve designed mechatronic, industrial, and AI products, counsulted for startups, 

@@ -16,6 +16,8 @@ import {
   FaMagnifyingGlass,
 } from 'react-icons/fa6';
 
+import { RxArrowTopRight } from "react-icons/rx";
+
 // import required modules
 import { FreeMode, Pagination } from 'swiper';
 

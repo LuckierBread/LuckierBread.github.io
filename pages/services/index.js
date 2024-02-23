@@ -31,9 +31,9 @@ const Services = () => {
               exit='hidden'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'
             >
-              Unlock your business's potential with custom AI tools and models. 
+              Unlock your business&apos;s potential with custom AI tools and models. 
               Streamline operations, boost productivity, and elevate customer experiences. 
-              Let's innovate together!
+              Let&apos;s innovate together!
             </motion.p>
           </div>
 

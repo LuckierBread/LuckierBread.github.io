@@ -37,7 +37,9 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            I have 4 years of experience in machine learning and 7 years in mechanical/electronic design. My goal is to use my knowledge of the latest technology to make a difference in the tech industry. Here's what I bring to the table:
+            I have 4 years of experience in machine learning and 7 years in mechanical/electronic design. 
+            My goal is to use my knowledge of the latest technology to make a difference in the tech industry. 
+            Here&apos;s what I bring to the table:
 
             - Expertise in machine learning architecture
             - Wide-ranging engineering experience

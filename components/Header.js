@@ -1,11 +1,5 @@
-// next image
-import Image from 'next/image';
-
-// next link
 import Link from 'next/link';
-
-// components
-import Socials from '../components/Socials';
+import Socials from './Socials'; // Make sure this import is correct
 
 const Header = () => {
   return (
@@ -20,8 +14,8 @@ const Header = () => {
               height={48}
               alt=''
               priority={true}
-            /> */}
-            <a style={{fontSize:'24px'}}><span style={{fontWeight:'bold'}}>Michael</span> Ursuliak</a>
+              /> */}
+             <span style={{fontSize:'24px', fontWeight:'bold'}}>Michael Ursuliak</span>
           </Link>
           {/* socials */}
           <Socials />

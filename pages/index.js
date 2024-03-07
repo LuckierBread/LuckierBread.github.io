@@ -37,12 +37,14 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            With 4 years of machine learning experience and 7 years of mechanical/electronic design experience, I
-            aim to leverage my advanced understanding of cutting-edge technology, machine learning
-            architecture, and wide range of engineering experience to make an impact on the modern tech
-            landscape. Be it machine vision, robotics, or electrical systems, I have the knowledge and skills needed to
-            make your projects a reality.
+            I have 4 years of experience in machine learning and 7 years in mechanical/electronic design. My goal is to use my knowledge of the latest technology to make a difference in the tech industry. Here's what I bring to the table:
 
+            - Expertise in machine learning architecture
+            - Wide-ranging engineering experience
+            - Knowledge in machine vision and robotics
+            - Skills in managing electrical systems
+
+            I have the knowledge and skills needed to bring your projects to life.
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>

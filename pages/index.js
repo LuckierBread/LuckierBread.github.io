@@ -27,7 +27,7 @@ const Home = () => {
             className='h1'
           >
             Transforming Ideas <br /> Into{' '}
-            <span className='text-accent'>Digital Reality</span>
+            <span className='text-accent'>Reality</span>
           </motion.h1>
           {/* subtitle */}
           <motion.p
@@ -37,17 +37,10 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            I have 4 years of experience in machine learning and 7 years in mechanical/electronic design. 
-            My goal is to use my knowledge of the latest technology to make a difference in the tech industry. 
-            Here&apos;s what I bring to the table:
-
-            - Expertise in machine learning architecture
-            - Wide-ranging engineering experience
-            - Knowledge in machine vision and robotics
-            - Skills in managing electrical systems
-
-            I have the knowledge and skills needed to bring your projects to life.
-          </motion.p>
+            My passion is to use technology to create a better world.
+            4 years of machine learning and 7 years of mechatronics.
+            I thrive in a fast paced and agile environment where creativity and innocation are king.
+            From robotics to AI, I can make it happen.
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>
             <ProjectsBtn />

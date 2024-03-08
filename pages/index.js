@@ -58,9 +58,12 @@ const Home = () => {
         </div>
       </div>
       {/* image */}
-      <div className='w-[1200px] h-full absolute right-0 bottom-0'>
+      <div className='w-[1500px] h-full absolute right-0 bottom-0'>
         {/* bg img */}
-        <div className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0'></div>
+        {/* <div className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute left-[45%] 
+        mix-blend-color-dodge translate-z-0'></div> */}
+        <div className='bg-gradient-to-t xl:bg-explosion xl:bg-cover xl:bg-center xl:bg-no-repeat w-full h-full absolute right-[-10%]
+        mix-blend-color-dodge'></div>
         {/* particles */}
         <ParticlesContainer />
         {/* avatar img */}
@@ -70,7 +73,7 @@ const Home = () => {
           animate='show'
           exit='hidden'
           transition={{ duration: 1, ease: 'easeInOut' }}
-          className='w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]'
+          className='w-full h-full max-w-[800px] max-h-[700px] absolute lg:bottom-[0%] lg:right-[14%]'
         >
           <Avatar />
         </motion.div>

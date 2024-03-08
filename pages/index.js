@@ -41,6 +41,7 @@ const Home = () => {
             4 years of machine learning and 7 years of mechatronics.
             I thrive in a fast paced and agile environment where creativity and innocation are king.
             From robotics to AI, I can make it happen.
+          </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>
             <ProjectsBtn />

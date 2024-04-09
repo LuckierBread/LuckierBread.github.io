@@ -14,18 +14,18 @@ import { fadeIn } from '../variants';
 
 const Home = () => {
   return (
-    <div className='bg-primary/60 h-full flex items-center justify-center'>
+    <div className='bg-primary/60 h-full flex items-center justify-between'>
       {/* text */}
       <div className='w-full h-full bg-color black/10 absolute flex items-center justify-center z-10'>
         <div className='xl:absolute xl:left-[10%] z-20 flex flex-col justify-center items-center
-          xl:text-left backdrop-blur-md bg-opacity-50 bg-black rounded-lg px-8 py-8'>
+          xl:text-left px-8 py-8'>
           {/* title */}
           <motion.h1
-          variants={fadeIn('down', 0.2)}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-          className='h1'
+            variants={fadeIn('down', 0.2)}
+            initial='hidden'
+            animate='show'
+            exit='hidden'
+            className='h1'
           >
             Transforming Ideas <br /> Into{' '}
             <span className='text-accent'>Reality</span>
@@ -59,11 +59,9 @@ const Home = () => {
         </div>
       </div>
       {/* image */}
-      <div className='w-[1500px] z-4 h-full absolute right-[-0%] bottom-0 '>
+      <div className='flex items-center justify-center w-[1500px] z-4 h-full absolute right-0 bottom-0 '>
         {/* bg img */}
-        {/* <div className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute left-[45%] 
-        mix-blend-color-dodge translate-z-0'></div> */}
-        <div className='bg-gradient-to-t xl:bg-explosion xl:bg-cover xl:bg-center xl:bg-no-repeat w-full h-full absolute 
+        <div className='bg-gradient-to-t xl:bg-explosion xl:bg-cover xl:bg-center w-full h-full absolute 
         mix-blend-color-dodge'></div>
         {/* particles */}
         <ParticlesContainer />
@@ -74,7 +72,7 @@ const Home = () => {
           animate='show'
           exit='hidden'
           transition={{ duration: 1, ease: 'easeInOut' }}
-          className='w-full h-full max-w-[800px] max-h-[700px] absolute lg:bottom-[0%] lg:right-[24%]'
+          className='w-full h-full max-w-[800px] max-h-[700px] absolute lg:bottom-0 right-1/8'
         >
           <Avatar />
         </motion.div>

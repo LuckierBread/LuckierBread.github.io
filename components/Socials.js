@@ -1,8 +1,8 @@
 // links
 import Link from 'next/link';
+import {
 
 // icons
-import {
   RiYoutubeLine,
   RiInstagramLine,
   RiFacebookLine,
@@ -16,8 +16,11 @@ import {
 const Socials = () => {
   return (
     <div className='flex items-center gap-x-5 text-lg'>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
+      <Link href={'www.linkedin.com/in/michael-ursuliak-647175128'} className='hover:text-accent transition-all duration-300'>
         <RiLinkedinBoxFill />
+      </Link>
+      <Link href={'www.github.com/luckierbread'} className='hover:text-accent transition-all duration-300'>
+        <RiGithubFill />
       </Link>
     </div>
   );

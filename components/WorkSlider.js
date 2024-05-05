@@ -5,7 +5,7 @@ export const workSlider = {
       images: [
         {
           title: 'YOLOv9 Car Counter',
-          path: '/DEMO.PNG',
+          path: '/Demo.PNG',
         },
         {
           title: 'title',

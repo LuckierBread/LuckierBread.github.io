@@ -8,7 +8,7 @@ export const workSlider = {
           path: '/Demo.PNG',
         },
         {
-          title: 'title',
+          title: 'Neural Netrork Learning Visualization',
           path: '/thumb2.jpg',
         },
         {

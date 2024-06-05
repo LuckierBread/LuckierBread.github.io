@@ -5,11 +5,11 @@ export const workSlider = {
       images: [
         {
           title: 'YOLOv9 Car Counter',
-          path: '/Demo.PNG',
+          path: '/Car_Demo.PNG',
         },
         {
           title: 'Neural Netrork Learning Visualization',
-          path: '/thumb2.jpg',
+          path: '/Importance_Map.PNG',
         },
         {
           title: 'title',

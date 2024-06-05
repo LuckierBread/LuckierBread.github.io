@@ -9,7 +9,7 @@ export const workSlider = {
         },
         {
           title: 'Neural Netrork Learning Visualization',
-          path: '/Importance_Map.PNG',
+          path: '/Importance_Map.png',
         },
         {
           title: 'title',

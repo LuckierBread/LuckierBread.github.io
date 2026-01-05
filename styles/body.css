@@ -1,6 +1,7 @@
 body{
     margin-top:70px;
     font-family: "Roboto";
+    background-color: var(--bg-color);
 }
 
 .about{
@@ -9,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 30vh;
-    background-color: var(--secondary-color);
+    background-color: var(--bg-color);
     color: var(--light-color);
 }
 

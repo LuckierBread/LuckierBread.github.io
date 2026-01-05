@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #0d6efd; /* Primary accent color (blue) */
-    --secondary-color: #6610f2; /* Secondary accent color (purple) */
-    --bg-color: #f8f9fa; /* Light background */
+    --primary-color: #2eb5d3; /* Primary accent color (blue) */
+    --secondary-color: #b59a3d; /* Secondary accent color (purple) */
+    --bg-color: #090d18; /* Light background */
     --dark-color: #212529; /* Dark text */
-    --light-color: #ffffff; /* Light containers */
-    --card-bg: #ffffff; /* Card background */
+    --light-color: #f5f5f7; /* Light containers */
+    --card-bg: #111527; /* Card background */
     --border-radius: 16px;
     --shadow: 0 0 12px rgba(0, 0, 0, 0.15);
     --big-shadow: 0 0 16px rgba(0, 0, 0, 0.5);

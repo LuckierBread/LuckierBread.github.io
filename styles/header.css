@@ -15,7 +15,7 @@ header{
 header .logo{
     font-size: 2rem;
     font-weight: 700;
-    color: var(--primary-color)
+    color: var(--light-color)
 }
 
 header ul{
@@ -30,5 +30,5 @@ header li{
 
 header a{
     text-decoration: none;
-    color:black;
+    color:var(--light-color);
 }

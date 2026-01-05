@@ -1,0 +1,34 @@
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:70px;
+    padding: var(--page-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    box-shadow: var(--shadow);
+    background-color: var(--bg-color)
+}
+
+header .logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color)
+}
+
+header ul{
+    display:flex;
+    flex-direction: row;
+    gap:10px
+}
+
+header li{
+    list-style-type: none;
+}
+
+header a{
+    text-decoration: none;
+    color:black;
+}

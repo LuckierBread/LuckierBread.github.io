@@ -1,0 +1,20 @@
+body{
+    margin-top:70px;
+    font-family: "Roboto";
+}
+
+.about{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+/* Projects-Grid has it's own CSS file */
+
+.contact{
+    height:50vh;
+}

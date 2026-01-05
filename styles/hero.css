@@ -1,6 +1,8 @@
-.hero{
+section.hero{
     position:relative;
-    height:93vh;
+    padding-top: 10rem 0 0 0;
+    width:100%;
+    max-width:none;
     display: flex;
     justify-content: center;
     overflow:hidden;

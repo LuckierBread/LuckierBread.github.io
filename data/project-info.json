@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Neural Traffic Counter",
+    "img": "../data/images/img1",
+    "description": "YOLO-based system that detects and counts vehicles in real time from roadside cameras.",
+    "category": ["AI", "web"]
+  },
+  {
+    "title": "Emotion Classification Engine",
+    "img": "../data/images/img2",
+    "description": "NLP model that analyzes text sentiment and emotional tone for social media analytics.",
+    "category": ["AI"]
+  },
+  {
+    "title": "Predictive Weather Forecaster",
+    "img": "../data/images/img3",
+    "description": "Time-series forecasting model that predicts local temperature and precipitation trends.",
+    "category": ["AI", "web"]
+  },
+  {
+    "title": "Autonomous Line-Following Rover",
+    "img": "../data/images/img4",
+    "description": "Microcontroller-driven robot that navigates paths using IR sensors and PID control.",
+    "category": ["robot"]
+  },
+  {
+    "title": "Remote Excavator Controller",
+    "img": "../data/images/img5",
+    "description": "WiFi-controlled tracked excavator with live video feed and motor telemetry.",
+    "category": ["robot", "web"]
+  },
+  {
+    "title": "AI-Powered Hydroponics System",
+    "img": "../data/images/img6",
+    "description": "ESP32 grow system that uses ML to optimize lighting and nutrient schedules via a web dashboard.",
+    "category": ["AI", "robot", "web"]
+  },
+  {
+    "title": "Personal Portfolio Website",
+    "img": "../data/images/img7",
+    "description": "Responsive portfolio site built with modern HTML, CSS Grid, and JavaScript modules.",
+    "category": ["web"]
+  },
+  {
+    "title": "Realtime Chat Dashboard",
+    "img": "../data/images/img8",
+    "description": "WebSocket-powered web app for displaying live messages and system metrics.",
+    "category": ["web"]
+  },
+  {
+    "title": "Vision-Guided Pick-and-Place Arm",
+    "img": "../data/images/img9",
+    "description": "Camera-assisted robotic arm that identifies objects using ML and is controlled through a web UI.",
+    "category": ["AI", "robot", "web"]
+  }
+]

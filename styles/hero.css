@@ -1,5 +1,6 @@
 .hero{
     position:relative;
+    height:93vh;
     display: flex;
     justify-content: center;
     overflow:hidden;
@@ -16,13 +17,20 @@
     top:0px;
     bottom:0px;
     right:0px;
-    left:30%;
-    display: flex;
+    left:0px;
+    background: 
+    linear-gradient(to bottom, rgba(255,255,255,0.05), transparent),
+    linear-gradient(80deg,transparent 40%, rgba(13, 17, 30,0.8)50%, rgba(13, 17, 30,0.98)60%);
+}
+
+.hero .container{
+    position:absolute;
+    top: 20%;
+    right:5%;
+    left: 60%;
+    display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding-left:10%;
-    background: linear-gradient(90deg,transparent,rgba(0,0,0,0.9)40%);
+    justify-content: right;
 }
 
 .hero h1{
@@ -48,7 +56,7 @@
 
 .hero .button-container{
     display:flex;
-    gap:16px;
+    gap:1rem;
 }
 
 .hero button{

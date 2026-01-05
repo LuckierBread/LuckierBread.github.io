@@ -1,17 +1,15 @@
 body{
-    margin-top:70px;
+    margin-top:7vh;
     font-family: "Roboto";
     background-color: var(--bg-color);
 }
 
-.about{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 30vh;
-    background-color: var(--bg-color);
-    color: var(--light-color);
+.icon{
+    width: 62px;
+    height: 62px;
+    color: white;
+    fill:white;
+    stroke: white;
 }
 
 /* Projects-Grid has it's own CSS file */

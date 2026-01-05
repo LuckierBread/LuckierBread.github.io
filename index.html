@@ -2,8 +2,12 @@
 <html>
     <head>
         <title>Michael Ursuliak</title>
-        <link rel="stylesheet" href="styles/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Wallpoet&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/main.css">
     </head>
+
     <body>
         <header>
             <div class="logo">Michael Ursuliak</div>
@@ -16,67 +20,35 @@
                 </ul>
             </nav>
         </header>
-        <section id="home" class="hero">
 
-            <h1 class="hero-title">Title</h1>
-            <p class="hero-text">This is a basic filler for what will be there. 
-                blah blah blah de de de dum dum dum splooga.
-            </p>
-        </section>
-        <section id="about" class="about">
-            <h1>My Mission</h1>
-            <p>This is more stuff about what i want to acomplish with my work</p>
-        </section>
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <div class="container">
-                <div class="section-container">
-                    <h2>AI project</h2>
-                    <div class="card-container">
-                        <div class="project-card">
-                            <img width="100px" height="100px">
-                            <h3 class="project-title">AI project 1</h3>
-                            <p class="project-description">description</p>
-                        </div>
-                        <div class="project-card">
-                            <img width="100px" height="100px">
-                            <h3 class="project-title">AI project 2</h3>
-                            <p class="project-description">description</p>
-                        </div>
-                    </div>
-                </div>          
-                <div class="section-container">
-                    <h2>Robotics project</h2>
-                    <div class="card-container">
-                        <div class="project-card">
-                            <img width="100px" height="100px">
-                            <h3 class="project-title">Robot project 1</h3>
-                            <p class="project-description">description</p>
-                        </div>
-                        <div class="project-card">
-                            <img width="100px" height="100px">
-                            <h3 class="project-title">Robot project 2</h3>
-                            <p class="project-description">description</p>
-                        </div>
-                    </div>
-                </div>   
-                <div class="section-container">
-                    <h2>Web project</h2>
-                    <div class="card-container">
-                        <div class="project-card">
-                            <img width="100px" height="100px">
-                            <h3 class="project-title">Web project 1</h3>
-                            <p class="project-description">description</p>
-                        </div>
-                        <div class="project-card">
-                            <img width="100px" height="100px">
-                            <h3 class="project-title">Web project 2</h3>
-                            <p class="project-description">description</p>
-                        </div>
-                    </div>
-                </div>               
+        <section id="home" class="hero">
+            <img src="data/images/hero.png">
+            <div class="overlay">
+                <h1 class="hero-title">Developer</h1>
+                <p class="hero-text">I am a tech lover and developer, I want to help make the world a better place by facing the most pressing and difficult problems with technological and scientific mastery.
+                </p>
+                <button class="hero-porjects-CTA">View My Work</button>
+                <button class="hero-contact-CTA">Get In Touch</button>
             </div>
         </section>
+
+        <section id="about" class="about">
+            <h1>My Mission</h1>
+            <p>Global warming, political polerization, uncritical use of AI. The world has problems ones that i think we can face with the knowledge and will to move forward</p>
+        </section>
+
+        <section id="projects" class="projects">
+            <h1>Projects</h1>
+            <div class="catagory-container">
+                <button class="js-all-button">All</button>
+                <button class="js-ai-button">AI</button>
+                <button class="js-robotics-button">Robotics</button>
+                <button class="js-web-button">Web</button>
+            </div>
+            <div class="projects-grid js-projects-grid">             
+            </div>
+        </section>
+
         <section id="contact" class="contact">
             <div>
                 <i class="fi fi-rr-envelope"></i>
@@ -87,8 +59,11 @@
                 <address>1(780)554-3033</address>
             </div>
         </section>
+
         <footer>
-            <p>copyright Michael Ursuliak 2026</p>
+            <p>&copy;Copyright Michael Ursuliak 2026</p>
         </footer>
+
+        <script type="module" src="scripts/projects-grid.js"></script>
     </body>
 </html>

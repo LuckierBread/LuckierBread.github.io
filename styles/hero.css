@@ -1,8 +1,7 @@
 section.hero{
     position:relative;
-    padding-top: 10rem 0 0 0;
+    padding: 4.5rem 0px 0px 0px;
     width:100%;
-    max-width:none;
     display: flex;
     justify-content: center;
     overflow:hidden;

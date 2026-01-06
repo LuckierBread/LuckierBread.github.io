@@ -3,7 +3,6 @@ header{
     top:0;
     left:0;
     right:0;
-    padding: 1rem 2rem;
     display: flex;
     justify-content: center;
     background-color: var(--bg-color);
@@ -13,11 +12,12 @@ header{
 
 header .container{
     width:100%;
+    max-width: var(--max-width);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 1300px;
+    padding: 1rem 2rem;
 }
 
 header .logo{

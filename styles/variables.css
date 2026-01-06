@@ -6,11 +6,11 @@
     --light-color: #f5f5f7; /* Light containers */
     --card-bg: #111527; /* Card background */
     --border-radius: 16px;
+    --max-width: 1920px;
     --shadow: 0 0 12px rgba(0, 0, 0, 0.15);
     --big-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
-    --page-padding: 0 20px 0 20px
 }
 
 *{

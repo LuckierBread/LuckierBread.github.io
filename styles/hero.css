@@ -2,7 +2,7 @@ section.hero{
     position:relative;
     padding: 4.5rem 0px 0px 0px;
     width:100%;
-    height: calc(100vh - 4.5rem);
+    height: calc(100vh - var(--nav-height));
     display: flex;
     justify-content: center;
     overflow:hidden;

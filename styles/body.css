@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -8,6 +12,7 @@ body{
 }
 
 section{
+    scroll-margin-top: var(--nav-height);
     padding:3rem;
     max-width: var(--max-width);
 }

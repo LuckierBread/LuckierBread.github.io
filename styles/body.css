@@ -9,7 +9,16 @@ body{
 
 section{
     padding:3rem;
-    max-width: 1300px;
+    max-width: var(--max-width);
+}
+
+hr{
+    height:2px;
+    width:100%;
+    border-style: none;
+    border-radius: 100%;
+    max-width: var(--max-width);
+    background: radial-gradient(grey,var(--bg-color)70%);
 }
 
 .icon{

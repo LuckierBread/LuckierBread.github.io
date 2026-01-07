@@ -63,24 +63,67 @@
         <hr>
         <section id="projects" class="projects">
             <h1>Featured Projects</h1>
-            <div class="catagory-container">
-                <button class="js-all-button">All</button>
-                <button class="js-ai-button">AI</button>
-                <button class="js-robotics-button">Robotics</button>
-                <button class="js-web-button">Web</button>
+            <div class="projects-grid">        
+                <div class="project-card">
+                    <div class="img-container">
+                        <img src="../data/images/img1.png">
+                        <div class="card-description">
+                            <p>YOLO-based system that detects and counts vehicles in real time from roadside cameras.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Neural Traffic Counter</h3>
+                </div>
+                <div class="project-card">
+                    <div class="img-container">
+                        <img src="../data/images/img5.png">
+                        <div class="card-description">
+                        <p>WiFi-controlled tracked excavator with live video feed and motor telemetry.</p>
+                        <button>Learn More</button>
+                    </div>
+                    </div>
+                    <h3 class="project-title">Remote Excavator Controller</h3>
+                </div>
+                <div class="project-card">
+                    <div class="img-container">
+                        <img src="../data/images/img6.png">
+                        <div class="card-description">
+                        <p>ESP32 grow system that uses ML to optimize lighting and nutrient schedules via a web dashboard.</p>
+                        <button>Learn More</button>
+                    </div>
+                    </div>
+                    <h3 class="project-title">AI-Powered Hydroponics System</h3>
+                </div>
             </div>
-            <div class="projects-grid js-projects-grid">             
-            </div>
+            <button class="see-all-button">See All Projects</button>
         </section>
         <hr>
-        <section id="contact" class="contact">
-            <div>
-                <i class="fi fi-rr-envelope"></i>
-                <address>Michael.Ursuliak@gmail.com</address>
-            </div>
-            <div>
-                <img phone>
-                <address>1(780)554-3033</address>
+       <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+
+            <div class="contact-grid">
+                <form class="contact-form">
+                    <label>
+                        Name
+                        <input type="text" name="name" required>
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" name="email" required>
+                    </label>
+
+                    <label>
+                        Message
+                        <textarea name="message" rows="5" required></textarea>
+                    </label>
+
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p><strong>Phone:</strong> <a href="tel:+17801234567">+1 (780) 123-4567</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:michael@example.com">michael@example.com</a></p>
+                </div>
             </div>
         </section>
 

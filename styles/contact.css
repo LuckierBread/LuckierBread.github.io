@@ -6,47 +6,107 @@
     align-items: center;
 }
 
-.contact-section h2{
-    text-align: center;
+.contact-info h1{
     margin-bottom: 1rem;
+}
+
+.contact-info p{
+    margin-bottom: 1rem;
+}
+
+
+.contact-info button{
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: 1rem;
+    font-weight: 600;
+
+    border: 2px solid grey;
+    border-radius: 10px;
+
+    padding: 14px 26px;
+    cursor: pointer;
+
+    transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease,
+    background-color 0.2s ease,
+}
+
+.contact-info button:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.25);
+    transform: translateY(-1px);
+}
+
+.contact-info button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(13, 110, 253, 0.35);
+}
+
+.contact-info button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.35);
 }
 
 .contact-grid{
     display: flex;
     flex-direction: row;
+    font-size: 1.4rem;
     gap:2rem;
 }
 
 .contact-info{
+    flex:1;
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items:center;
 }
 
+.contact-form label{
+    font-size: 1.2rem;
+}
 .contact-form{
-    width:50%;
+    flex:1;
+    font-size: 1.2rem;;
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    color: var(--light-color);
 }
 
 .contact-form input{
     width:100%;
+    font-size: 1.2rem;
     background-color: var(--dark-color);
     border-style: none;
     margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     border-radius: 8px;
+    color: var(--light-color);
+}
+
+.contact-form input::placeholder{
+    color:lightgray;
+    opacity: 0.8;
 }
 
 .contact-form textarea{
     resize: none;
+    font-size: 1.2rem;
     width:100%;
     background-color: var(--dark-color);
     border-style: none;
     margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     border-radius: 8px;
+    color: var(--light-color);
+}
+
+.contact-form textarea::placeholder{
+    color:lightgray;
+    opacity: 0.8;
 }

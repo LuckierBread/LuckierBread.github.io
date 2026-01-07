@@ -1,8 +1,8 @@
 section.hero{
     position:relative;
-    padding: 4.5rem 0px 0px 0px;
+    padding: var(--nav-height) 0px 0px 0px;
     width:100%;
-    height: calc(100vh - var(--nav-height));
+    height:100vh;
     display: flex;
     justify-content: center;
     overflow:hidden;
@@ -63,7 +63,7 @@ section.hero{
 }
 
 .hero a {
-    background-color: var(--bg-color);
+    background-color: var(--dark-color);
     color: var(--light-color);
     font-size: 1rem;
     font-weight: 600;

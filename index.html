@@ -30,8 +30,8 @@
                     <h2>Systems Engineer</h2>
                     <p>I specialize in developing ideas into working systems to tackle complex problems.</p>
                     <div class="button-container">
-                        <button class="hero-porjects-CTA">View My Work</button>
-                        <button class="hero-contact-CTA">Get In Touch</button>
+                        <a class="hero-porjects-CTA">View My Work</a>
+                        <a class="hero-contact-CTA" onclick="location.href='#content'">Get In Touch</a>
                     </div>
                 </div>
             </div>
@@ -100,37 +100,22 @@
         <hr>
        <section id="contact" class="contact-section">
             <h2>Contact</h2>
-
             <div class="contact-grid">
-                <form class="contact-form">
-                    <label>
-                        Name
-                        <input type="text" name="name" required>
-                    </label>
-
-                    <label>
-                        Email
-                        <input type="email" name="email" required>
-                    </label>
-
-                    <label>
-                        Message
-                        <textarea name="message" rows="5" required></textarea>
-                    </label>
-
-                    <button type="submit">Send Message</button>
-                </form>
                 <div class="contact-info">
-                    <p><strong>Phone:</strong> <a href="tel:+17801234567">+1 (780) 123-4567</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:michael@example.com">michael@example.com</a></p>
+                    <h3>Get in touch</h3>
+                    <p>I would love to hear from you and see what kinds of things we can make together!</p>
+                    <button type="submit">Send Message</button>
                 </div>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" required placeholder="Email">
+                    <textarea name="message" rows="5" required placeholder="Message"></textarea>
+                </form>
             </div>
         </section>
 
         <footer>
             <p>&copy;Copyright Michael Ursuliak 2026</p>
         </footer>
-
-        <script type="module" src="scripts/projects-grid.js"></script>
     </body>
 </html>

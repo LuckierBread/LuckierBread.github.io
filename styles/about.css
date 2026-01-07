@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-color);
     color: var(--light-color);
 }
 

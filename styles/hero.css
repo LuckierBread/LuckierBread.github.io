@@ -53,15 +53,16 @@ section.hero{
     font-weight: 400;
     font-style: italic;
     color: var(--light-color);
-    margin-bottom:1rem;
+    margin-bottom:2rem;
 }
 
 .hero .button-container{
     display:flex;
-    gap:1rem;
+    gap:2rem;
+    justify-content: start;
 }
 
-.hero button {
+.hero a {
     background-color: var(--bg-color);
     color: var(--light-color);
     font-size: 1rem;
@@ -77,21 +78,21 @@ section.hero{
         border-color 0.2s ease,
         box-shadow 0.2s ease,
         transform 0.15s ease,
-        background-color 0.2s ease;
+        background-color 0.2s ease,
 }
 
-.hero button:hover {
+.hero a:hover {
     border-color: var(--primary-color);
     box-shadow: 0 6px 16px rgba(13, 110, 253, 0.25);
     transform: translateY(-1px);
 }
 
-.hero button:active {
+.hero a:active {
     transform: translateY(0);
     box-shadow: 0 3px 8px rgba(13, 110, 253, 0.35);
 }
 
-.hero button:focus-visible {
+.hero a:focus-visible {
     outline: none;
     box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.35);
 }

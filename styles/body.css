@@ -9,6 +9,7 @@ body{
     align-items: center;
     font-family: "Roboto";
     background-color: var(--bg-color);
+    color: var(--light-color);
 }
 
 section{

@@ -1,5 +1,6 @@
 .about{
     display:flex;
+    margin: 10rem 0rem;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
@@ -9,12 +10,12 @@
 }
 
 .about h1{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .card-container{
     display: flex;
-    gap:1rem;
+    gap:2rem;
     justify-content: space-evenly;
 }
 

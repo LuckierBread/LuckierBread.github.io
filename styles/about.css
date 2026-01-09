@@ -18,7 +18,7 @@
     justify-content: space-evenly;
 }
 
-@media (max-width: 768px), (max-aspect-ratio: 4/3) {
+@media (max-width: 768px), (max-aspect-ratio:1){
     .card-container{
         flex-direction: column;
     }

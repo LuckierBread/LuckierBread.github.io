@@ -1,6 +1,6 @@
 :root {
     --primary-color: #2eb5d3; /* Primary accent color (blue) */
-    --secondary-color: #b59a3d; /* Secondary accent color (purple) */
+    --secondary-color: #181818; /* Secondary accent color (purple) */
     --bg-color: #090d18; /* Light background */
     --dark-color: #151d31; /* Dark text */
     --dark-color-overlay: rgba(33, 37, 41, 0.8);

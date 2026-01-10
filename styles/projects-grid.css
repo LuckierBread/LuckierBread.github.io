@@ -31,17 +31,34 @@
 
 .project-card{
     flex:1;
+    position:relative;
+    padding:1rem;
+    background-color: black;
     display:flex;
-    overflow:hidden;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background-color: var(--dark-color);
     border-style: none;
     border-radius: var(--border-radius);
     cursor: pointer;
-    z-index: 2;
     transition: transform 0.15s; 
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: -1px;             /* expands 1px on all sides */
+    border-radius: inherit;    /* keeps corners aligned */
+    z-index: -1;              /* sit behind the card */
+    
+    background: linear-gradient(
+        135deg,
+        oklab(70.192% -0.14859 0.05272 /0.70),
+        oklab(48.78% -0.02365 -0.24215 / 0.70),
+        oklab(62.05% 0.14837 -0.21201 / 0.70)
+    );
+
+    filter: blur(6px);  
 }
 
 .project-card .img-container{
@@ -51,6 +68,7 @@
     align-items: center;
     box-shadow: var(--shadow);
     display: block;
+    border-radius: inherit;
 }
 
 .project-card img{

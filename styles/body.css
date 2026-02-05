@@ -1,19 +1,31 @@
 html{
     scroll-behavior: smooth;
+    margin:0;
+    height:auto;
 }
 
 *{
     box-sizing: border-box;
 }
 
+#shader-bg{
+    position:fixed;
+    display: block; 
+    inset: 0;
+    z-index: -100;
+    pointer-events: none;
+}
+
 body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-family: "Roboto";
     background: linear-gradient(-90deg,var(--bg-color),#0c1220);
-    color: var(--light-color);
+    margin:0;
+    height:auto;
+    background:#000;
 }
 
 section{

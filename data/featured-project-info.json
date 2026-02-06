@@ -1,26 +1,20 @@
 [
   {
     "title": "Neural Traffic Counter",
-    "img": "../data/images/img1",
+    "img": "../data/images/img1.png",
     "description": "YOLO-based system that detects and counts vehicles in real time from roadside cameras.",
     "category": ["AI", "web"]
   },
   {
     "title": "Emotion Classification Engine",
-    "img": "../data/images/img2",
+    "img": "../data/images/img2.png",
     "description": "NLP model that analyzes text sentiment and emotional tone for social media analytics.",
     "category": ["AI"]
   },
   {
     "title": "Remote Excavator Controller",
-    "img": "../data/images/img5",
+    "img": "../data/images/img5.png",
     "description": "WiFi-controlled tracked excavator with live video feed and motor telemetry.",
     "category": ["robot", "web"]
-  },
-  {
-    "title": "AI-Powered Hydroponics System",
-    "img": "../data/images/img6",
-    "description": "ESP32 grow system that uses ML to optimize lighting and nutrient schedules via a web dashboard.",
-    "category": ["AI", "robot", "web"]
   }
 ]

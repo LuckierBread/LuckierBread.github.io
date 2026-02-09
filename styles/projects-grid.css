@@ -230,7 +230,7 @@
 
 /* inactive */
 .accordion-item:not(.active) .caption {
-  bottom: 6rem;
+  bottom: 8rem;
   left: 50%;
   transform: translateX(-50%) rotate(90deg);
 }

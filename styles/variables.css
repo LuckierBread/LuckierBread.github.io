@@ -10,8 +10,8 @@
     --max-width: 1920px;
     --shadow: 0 0 12px rgba(0, 0, 0, 0.15);
     --big-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
-    --font-primary: 'Poppins', sans-serif;
-    --font-secondary: 'Roboto', sans-serif;
+    --font-primary: "Inter", "Inter var", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-secondary: "Inter", "Inter var", system-ui, -apple-system, "Segoe UI", sans-serif;
     --nav-height:4.5rem;
 }
 

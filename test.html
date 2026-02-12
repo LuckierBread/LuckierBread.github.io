@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test page</title>
+    </head>
+    <body>
+<section class="stack-hero">
+  <div class="stack-copy">
+    <h1>Full-stack systems, built end-to-end.</h1>
+    <p>Frontend UI → compute → embedded/robotic execution, wired together like a real pipeline.</p>
+  </div>
+
+  <div class="stack-signal" aria-label="Full stack pipeline">
+    <!-- Top: Web page -->
+    <div class="node">
+      <svg viewBox="0 0 64 64" class="icon" role="img" aria-label="Web page icon">
+        <rect x="10" y="12" width="44" height="40" rx="6"></rect>
+        <line x1="10" y1="20" x2="54" y2="20"></line>
+        <circle cx="16" cy="16" r="1.5"></circle>
+        <circle cx="21" cy="16" r="1.5"></circle>
+        <circle cx="26" cy="16" r="1.5"></circle>
+        <line x1="18" y1="30" x2="46" y2="30"></line>
+        <line x1="18" y1="36" x2="40" y2="36"></line>
+        <line x1="18" y1="42" x2="44" y2="42"></line>
+      </svg>
+      <div class="label">Frontend</div>
+    </div>
+
+    <!-- Connector -->
+    <svg class="wire" viewBox="0 0 40 120" aria-hidden="true">
+      <path class="wire-base" d="M20 6 C20 40, 20 80, 20 114"></path>
+      <path class="wire-signal" d="M20 6 C20 40, 20 80, 20 114"></path>
+      <circle class="wire-dot" cx="20" cy="6" r="3"></circle>
+      <circle class="wire-dot" cx="20" cy="114" r="3"></circle>
+    </svg>
+
+    <!-- Middle: CPU -->
+    <div class="node">
+      <svg viewBox="0 0 64 64" class="icon" role="img" aria-label="CPU icon">
+        <rect x="18" y="18" width="28" height="28" rx="6"></rect>
+        <rect x="26" y="26" width="12" height="12" rx="3"></rect>
+        <!-- pins -->
+        <line x1="32" y1="10" x2="32" y2="18"></line>
+        <line x1="32" y1="46" x2="32" y2="54"></line>
+        <line x1="10" y1="32" x2="18" y2="32"></line>
+        <line x1="46" y1="32" x2="54" y2="32"></line>
+
+        <line x1="22" y1="10" x2="22" y2="18"></line>
+        <line x1="42" y1="10" x2="42" y2="18"></line>
+        <line x1="22" y1="46" x2="22" y2="54"></line>
+        <line x1="42" y1="46" x2="42" y2="54"></line>
+
+        <line x1="10" y1="22" x2="18" y2="22"></line>
+        <line x1="10" y1="42" x2="18" y2="42"></line>
+        <line x1="46" y1="22" x2="54" y2="22"></line>
+        <line x1="46" y1="42" x2="54" y2="42"></line>
+      </svg>
+      <div class="label">Backend / Compute</div>
+    </div>
+
+    <!-- Connector -->
+    <svg class="wire delay" viewBox="0 0 40 120" aria-hidden="true">
+      <path class="wire-base" d="M20 6 C20 40, 20 80, 20 114"></path>
+      <path class="wire-signal" d="M20 6 C20 40, 20 80, 20 114"></path>
+      <circle class="wire-dot" cx="20" cy="6" r="3"></circle>
+      <circle class="wire-dot" cx="20" cy="114" r="3"></circle>
+    </svg>
+
+    <!-- Bottom: Robotic assembly -->
+    <div class="node">
+      <svg viewBox="0 0 64 64" class="icon" role="img" aria-label="Robotic assembly icon">
+        <!-- base -->
+        <rect x="12" y="48" width="40" height="6" rx="3"></rect>
+        <rect x="18" y="42" width="28" height="6" rx="3"></rect>
+        <!-- arm -->
+        <path d="M24 42 L24 30 Q24 26 28 26 L34 26"></path>
+        <path d="M34 26 L42 20 Q46 17 49 21 L52 25"></path>
+        <!-- gripper -->
+        <path d="M52 25 L56 23"></path>
+        <path d="M52 25 L55 29"></path>
+        <!-- joint circles -->
+        <circle cx="24" cy="30" r="2.2"></circle>
+        <circle cx="34" cy="26" r="2.2"></circle>
+        <circle cx="49" cy="21" r="2.2"></circle>
+      </svg>
+      <div class="label">Embedded / Robotics</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stack-hero{
+    display:grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items:center;
+    padding: clamp(2.5rem, 6vw, 5rem);
+    border-radius: 24px;
+    background: radial-gradient(1200px 600px at 20% 10%, rgba(255,255,255,0.08), transparent 55%),
+                radial-gradient(900px 500px at 80% 30%, rgba(120,180,255,0.10), transparent 55%),
+                rgba(10, 12, 18, 0.92);
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+
+  .stack-copy h1{
+    margin:0 0 0.75rem;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    letter-spacing: -0.02em;
+    color: rgba(255,255,255,0.95);
+  }
+  .stack-copy p{
+    margin:0;
+    max-width: 48ch;
+    color: rgba(255,255,255,0.70);
+    line-height: 1.5;
+  }
+
+  .stack-signal{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap: 1rem;
+  }
+
+  .node{
+    width: min(320px, 100%);
+    display:flex;
+    align-items:center;
+    gap: 1rem;
+    padding: 1rem 1.1rem;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+  }
+
+  .label{
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.01em;
+  }
+
+  .icon{
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
+    stroke: rgba(255,255,255,0.88);
+    stroke-width: 2.2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
+  }
+
+  .wire{
+    width: 40px;
+    height: 96px;
+    overflow: visible;
+  }
+
+  .wire-base{
+    fill:none;
+    stroke: rgba(255,255,255,0.20);
+    stroke-width: 3;
+  }
+
+  /* The moving "signal" */
+  .wire-signal{
+    fill:none;
+    stroke: rgba(120,180,255,0.95);
+    stroke-width: 3;
+    stroke-linecap: round;
+
+    stroke-dasharray: 10 18;
+    animation: dash 1.2s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(120,180,255,0.35));
+  }
+
+  .wire-dot{
+    fill: rgba(120,180,255,0.95);
+    opacity: 0.85;
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+
+  .wire.delay .wire-signal{ animation-delay: .35s; }
+  .wire.delay .wirewire-dot{ animation-delay: .35s; }
+  .wire.delay .wire-dot{ animation-delay: .35s; }
+
+  @keyframes dash{
+    to { stroke-dashoffset: -28; }
+  }
+
+  @keyframes pulse{
+    0%, 100% { transform: scale(1); opacity: 0.65; }
+    50%      { transform: scale(1.25); opacity: 1; }
+  }
+
+  @media (max-width: 900px){
+    .stack-hero{ grid-template-columns: 1fr; }
+  }
+</style>
+
+</body>
+</html>

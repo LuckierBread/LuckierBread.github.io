@@ -29,38 +29,6 @@
     }
 }
 
-.project-card{
-    flex:1;
-    position:relative;
-    padding:1rem;
-    background-color: black;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    border-style: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: transform 0.15s; 
-}
-
-.project-card::before {
-    content: "";
-    position: absolute;
-    inset: -1px;             /* expands 1px on all sides */
-    border-radius: inherit;    /* keeps corners aligned */
-    z-index: -1;              /* sit behind the card */
-    
-    background: linear-gradient(
-        135deg,
-        oklab(70.192% -0.14859 0.05272 /0.70),
-        oklab(48.78% -0.02365 -0.24215 / 0.70),
-        oklab(62.05% 0.14837 -0.21201 / 0.70)
-    );
-
-    filter: blur(6px);  
-}
-
 .project-card .img-container{
     position:relative;
     width: 100%;
@@ -163,12 +131,13 @@
 .text h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin: 0;
+  color: white;
 }
 
 .text p {
   margin-top: 1.5rem;
   font-size: 1.1rem;
-  color: #555;
+  color: #a3a3a3;
   max-width: 520px;
 }
 
@@ -186,19 +155,58 @@
   flex: 1;
   display: flex;
   gap: 1rem;
-  overflow-x: auto;
+  padding: 10px;
 }
 
-/* Accordion item */
+/* OUTER: controls sizing + glow */
 .accordion-item {
   position: relative;
   height: 450px;
   flex: 0 0 60px;
-  border-radius: 16px;
-  overflow: hidden;
   cursor: pointer;
   transition: flex 0.7s ease;
   flex-shrink: 0;
+
+  border-radius: 16px;   /* 👈 put radius here so ::before inherits */
+}
+
+/* glow layer (NOT clipped) */
+.accordion-item::before {
+  content: "";
+  position: absolute;
+  inset: -2px;          /* 👈 give blur room */
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+    135deg,
+    oklab(70.192% -0.14859 0.05272 / 0.70),
+    oklab(48.78% -0.02365 -0.24215 / 0.70),
+    oklab(62.05% 0.14837 -0.21201 / 0.70)
+  );
+
+  filter: blur(6px);
+}
+
+
+/* INNER: crops image */
+.accordion-card {
+  position: relative;    /* 👈 required */
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;            /* above glow */
+}
+
+.accordion-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1) saturate(1);
 }
 
 .accordion-item.active {
@@ -211,6 +219,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.accordion-card{
+border-radius: 16px;
+overflow: hidden;
+z-index: 1;
 }
 
 .overlay {

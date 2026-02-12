@@ -20,9 +20,11 @@ function initAccordion(items){
     if (index === activeIndex) element.classList.add("active");
 
     element.innerHTML = `
-      <img src="${item.img}" alt="${item.title}">
-      <div class="overlay"></div>
-      <span class="caption">${item.title}</span>
+      <div class="accordion-card">
+        <img src="${item.img}" alt="${item.title}">
+        <div class="overlay"></div>
+        <span class="caption">${item.title}</span>
+      </div>
     `;
 
     element.addEventListener("mouseenter", () => {

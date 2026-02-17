@@ -1,6 +1,6 @@
 let items = []
 const accordion = document.getElementById("accordion");
-let activeIndex = 4;
+let activeIndex = 0;
 
 async function init(){
   items = await loadProjectData();

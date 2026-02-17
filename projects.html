@@ -1,43 +1,451 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Projects</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Wallpoet&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
-</html>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Michael Ursuliak</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  </head>
+  <body>
+    <div id="shader-bg"></div>
+
     <header>
-        <div class="container">
+      <div class="container">
         <div class="logo">Michael Ursuliak</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html#home">HOME</a></li>
-                    <li><a href="index.html#about">ABOUT</a></li>
-                    <li><a href="index.html#projects">PROJECTS</a></li>
-                    <li><a href="index.html#contact">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html#home">HOME</a></li>
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#projects">PROJECTS</a></li>
+            <li><a href="index.html#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <section id="projects" class="projects">
-        <h1>Featured Projects</h1>
-        <div class="catagory-container">
-            <button class="js-all-button">All</button>
-            <button class="js-ai-button">AI</button>
-            <button class="js-robotics-button">Robotics</button>
-            <button class="js-web-button">Web</button>
+    <main class="projects-page">
+      <section id="projects" class="container">
+        <div class="projects-shell">
+          <div class="projects-head">
+            <h1>Project Library</h1>
+            <p>Browse selected work across AI, robotics, and web systems.</p>
+          </div>
+
+          <div class="category-container" role="group" aria-label="Project categories">
+            <button class="js-all-button selected" type="button">All</button>
+            <button class="js-ai-button" type="button">AI</button>
+            <button class="js-robotics-button" type="button">Robotics</button>
+            <button class="js-web-button" type="button">Web</button>
+          </div>
+
+          <div class="projects-grid js-projects-grid"></div>
         </div>
-        <div class="projects-grid js-projects-grid">             
-        </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
-        <p>&copy;Copyright Michael Ursuliak 2026</p>
+      <div class="footer-inner">
+        <div class="footer-intro">
+          <h3>Michael Ursuliak</h3>
+          <p>Systems Engineering Portfolio</p>
+        </div>
+        <nav class="site-map" aria-label="Footer navigation">
+          <div class="footer-group">
+            <h4>Navigation</h4>
+            <div class="branch">
+              <a href="index.html#home">HOME</a>
+              <a href="index.html#about">ABOUT</a>
+              <a href="index.html#projects">FEATURED PROJECTS</a>
+              <a href="index.html#contact">CONTACT</a>
+            </div>
+          </div>
+          <div class="footer-group">
+            <h4>Project Areas</h4>
+            <div class="branch">
+              <a href="projects.html">WEB</a>
+              <a href="projects.html">ROBOTICS</a>
+              <a href="projects.html">AI &amp; MACHINE LEARNING</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <p class="footer-copy">&copy; Copyright Michael Ursuliak 2026</p>
     </footer>
 
+    <script type="module" src="scripts/three-shader.js"></script>
     <script type="module" src="scripts/projects-grid.js"></script>
-</body>
+
+    <style>
+:root{
+  --bg: #070a12;
+  --bg2:#0b1220;
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.68);
+
+  --card: rgba(255,255,255,.06);
+  --card2: rgba(255,255,255,.04);
+  --border: rgba(255,255,255,.12);
+
+  --accent: 120,180,255;
+  --accent2: 255,120,220;
+
+  --max: 1100px;
+  --nav-h: 72px;
+  --r: 22px;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 700px at 20% 10%, rgba(var(--accent), .06), transparent 55%),
+    radial-gradient(900px 600px at 85% 25%, rgba(var(--accent2), .08), transparent 55%),
+    radial-gradient(1000px 700px at 50% 120%, rgba(120,255,200,.08), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg2));
+  overflow-x:hidden;
+}
+
+.container{
+  width: min(var(--max), 92vw);
+  margin-inline:auto;
+}
+
+#shader-bg{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events:none;
+  opacity:.9;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  display:flex;
+  align-items:center;
+  background: rgba(10,12,18,.55);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+header .container{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo{
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap: .8rem;
+  padding:0;
+  margin:0;
+}
+
+nav a{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding: .55rem .8rem;
+  border-radius: 999px;
+  text-decoration:none;
+  color: rgba(255,255,255,.78);
+  border: 1px solid transparent;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+nav a:hover{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.10);
+  transform: translateY(-1px);
+}
+
+.projects-page{
+  padding: clamp(2.2rem, 4vw, 3rem) 0 4rem;
+}
+
+.projects-shell{
+  position:relative;
+  border-radius: var(--r);
+  background: linear-gradient(180deg, var(--card), var(--card2));
+  border: 1px solid var(--border);
+  box-shadow: 0 14px 50px rgba(0,0,0,.35);
+  backdrop-filter: blur(10px);
+  padding: 1.4rem;
+  overflow:hidden;
+}
+
+.projects-shell::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius: inherit;
+  background: radial-gradient(620px 200px at 16% 0%, rgba(var(--accent), .18), transparent 58%);
+  opacity:.9;
+  pointer-events:none;
+}
+
+.projects-head,
+.category-container,
+.projects-grid{
+  position: relative;
+  z-index: 1;
+}
+
+.projects-head h1{
+  margin:0;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  line-height: 1.05;
+}
+
+.projects-head p{
+  margin: .72rem 0 0;
+  color: var(--muted);
+  max-width: 58ch;
+}
+
+.category-container{
+  margin-top: 1.1rem;
+  display:flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+button{
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: .62rem .95rem;
+  border-radius: 999px;
+  font-weight: 650;
+  letter-spacing: .01em;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+}
+
+button:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.09);
+  border-color: rgba(255,255,255,.20);
+  box-shadow: 0 14px 40px rgba(0,0,0,.35);
+}
+
+button.selected{
+  background: linear-gradient(135deg, rgba(var(--accent), .34), rgba(var(--accent2), .18));
+  border-color: rgba(var(--accent), .42);
+}
+
+.projects-grid{
+  margin-top: 1.2rem;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-card{
+  position:relative;
+  border-radius: 18px;
+  background: linear-gradient(180deg, var(--card), var(--card2));
+  border: 1px solid var(--border);
+  box-shadow: 0 14px 50px rgba(0,0,0,.35);
+  overflow:hidden;
+  transition: transform .18s ease, border-color .18s ease;
+}
+
+.project-card::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius: inherit;
+  background: radial-gradient(460px 180px at 18% 0%, rgba(var(--accent), .20), transparent 55%);
+  opacity:.9;
+  pointer-events:none;
+}
+
+.project-card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,.20);
+}
+
+.img-container{
+  position:relative;
+  aspect-ratio: 1.6;
+  overflow:hidden;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+.project-card img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.project-content{
+  position: relative;
+  z-index: 1;
+  padding: .9rem .95rem 1rem;
+}
+
+.project-title{
+  margin:0;
+  font-size: 1rem;
+}
+
+.project-description{
+  margin: .48rem 0 0;
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.45;
+}
+
+.project-links{
+  margin-top: .75rem;
+}
+
+.project-action{
+  display:inline-flex;
+  align-items:center;
+  gap: .42rem;
+  padding: .4rem .72rem;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--accent), .34);
+  background: rgba(var(--accent), .10);
+  color: rgba(235, 248, 255, .92);
+  text-decoration:none;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.project-action svg{
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+}
+
+.project-action span{
+  line-height: 1;
+}
+
+.project-action:hover{
+  border-color: rgba(var(--accent), .52);
+  background: rgba(var(--accent), .16);
+}
+
+.project-action.placeholder{
+  border-color: rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+  color: rgba(255,255,255,.58);
+}
+
+footer{
+  padding: 2.2rem 0 1.6rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,.10);
+  background: rgba(8,10,16,.5);
+}
+
+.footer-inner{
+  width: min(var(--max), 92vw);
+  margin: 0 auto 1rem;
+  display:grid;
+  grid-template-columns: minmax(220px, .9fr) minmax(0, 1.1fr);
+  gap: 1.6rem;
+}
+
+.footer-intro h3{
+  margin:0;
+  font-size: 1rem;
+  color: rgba(255,255,255,.9);
+  letter-spacing: .01em;
+}
+
+.footer-intro p{
+  margin: .35rem 0 0;
+  color: rgba(255,255,255,.52);
+  font-size: .88rem;
+}
+
+.site-map{
+  margin: 0;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.footer-group h4{
+  margin: 0 0 .5rem;
+  font-size: .78rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(188, 218, 255, .62);
+}
+
+.branch{
+  display:grid;
+  gap:.34rem;
+}
+
+.site-map a{
+  color: rgba(255,255,255,.68);
+  text-decoration:none;
+  font-size: .86rem;
+}
+
+.site-map a:hover{ color: rgba(255,255,255,.86); }
+
+.footer-copy{
+  width: min(var(--max), 92vw);
+  margin: 0 auto;
+  color: rgba(255,255,255,.48);
+  font-size: .82rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: .8rem;
+}
+
+@media (max-width: 980px){
+  .projects-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px){
+  .footer-inner{
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .site-map{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px){
+  .projects-shell{
+    padding: 1rem;
+  }
+
+  .projects-grid{
+    grid-template-columns: 1fr;
+  }
+}
+    </style>
+  </body>
+</html>

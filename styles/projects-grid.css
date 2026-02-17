@@ -29,21 +29,6 @@
     }
 }
 
-.project-card{
-    flex:1;
-    display:flex;
-    overflow:hidden;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    background-color: var(--dark-color);
-    border-style: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    z-index: 2;
-    transition: transform 0.15s; 
-}
-
 .project-card .img-container{
     position:relative;
     width: 100%;
@@ -51,6 +36,7 @@
     align-items: center;
     box-shadow: var(--shadow);
     display: block;
+    border-radius: inherit;
 }
 
 .project-card img{
@@ -123,4 +109,157 @@
 
 .projects .see-all-button{
     margin-top: 2rem;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.layout {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 0;
+  color: white;
+}
+
+.text p {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #a3a3a3;
+  max-width: 520px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.accordion {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+}
+
+/* OUTER: controls sizing + glow */
+.accordion-item {
+  position: relative;
+  height: 450px;
+  flex: 0 0 60px;
+  cursor: pointer;
+  transition: flex 0.7s ease;
+  flex-shrink: 0;
+
+  border-radius: 16px;   /* 👈 put radius here so ::before inherits */
+}
+
+/* glow layer (NOT clipped) */
+.accordion-item::before {
+  content: "";
+  position: absolute;
+  inset: -2px;          /* 👈 give blur room */
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+    135deg,
+    oklab(70.192% -0.14859 0.05272 / 0.70),
+    oklab(48.78% -0.02365 -0.24215 / 0.70),
+    oklab(62.05% 0.14837 -0.21201 / 0.70)
+  );
+
+  filter: blur(6px);
+}
+
+
+/* INNER: crops image */
+.accordion-card {
+  position: relative;    /* 👈 required */
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;            /* above glow */
+}
+
+.accordion-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1) saturate(1);
+}
+
+.accordion-item.active {
+  flex: 0 0 400px;
+}
+
+.accordion-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.accordion-card{
+border-radius: 16px;
+overflow: hidden;
+z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.caption {
+  position: absolute;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+/* inactive */
+.accordion-item:not(.active) .caption {
+  bottom: 8rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+/* active */
+.accordion-item.active .caption {
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+    text-align: center;
+  }
 }

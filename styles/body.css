@@ -1,19 +1,58 @@
 html{
     scroll-behavior: smooth;
+    margin:0;
+    height:auto;
 }
 
 *{
     box-sizing: border-box;
 }
 
+#shader-bg{
+    position:fixed;
+    display: block; 
+    inset: 0;
+    z-index: -100;
+    pointer-events: none;
+}
+
 body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    font-family: "Roboto";
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
     background: linear-gradient(-90deg,var(--bg-color),#0c1220);
-    color: var(--light-color);
+    margin:0;
+    height:auto;
+    background:#000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.6rem;
+}
+
+p{
+    line-height: 1.7;
+    margin: 0 0 1.1rem;
+}
+
+button,
+input,
+textarea,
+select{
+    font: inherit;
+    line-height: 1.2;
 }
 
 section{

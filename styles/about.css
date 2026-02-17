@@ -1,14 +1,21 @@
 .about{
     display:flex;
-    margin: 10rem 0rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: var(--light-color);
+    background-color: rgb(10, 10, 10);
+    width:100vw;
 }
 
 .about h1{
     margin-bottom: 4rem;
+}
+
+svg.icon{
+  width: 6rem;
+  height: 6rem;
+  flex: 0 0 auto;
 }
 
 .card-container{
@@ -39,4 +46,5 @@
     font-size: 1.4rem;
     text-align: center;
     margin-top:1.5rem;
+    margin-bottom:3rem;
 }

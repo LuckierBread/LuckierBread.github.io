@@ -23,13 +23,23 @@
             </div>
         </header>
         <section id="home" class="hero">
-                <div class="container">
-                    <h1>Hi, I'm Michael Ursuliak</h1>
-                    <h2>Systems Engineer</h2>
-                    <p>Taking new ideas and turning them into new realities.</p>
-                    <div class="button-container">
-                        <a class="hero-porjects-CTA">View My Work</a>
-                        <a class="hero-contact-CTA" onclick="location.href='#content'">Get In Touch</a>
+                <div class="container hero-shell">
+                    <div class="hero-copy">
+                        <h1>Hi, I'm <span>Michael Ursuliak</span></h1>
+                        <h2>Systems Engineering</h2>
+                        <p>Turning new ideas into new realities.</p>
+                        <div class="button-container">
+                            <a class="hero-porjects-CTA" href="#projects">View My Work</a>
+                            <a class="hero-contact-CTA" href="#contact">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <figure class="hero-photo-sculpt">
+                            <img src="https://media.licdn.com/dms/image/v2/D5603AQFQ_r1FKadSbQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1670278833985?e=1772668800&v=beta&t=rmY20EQuvj1mEgdP6YCrkSu6qJ2l8TjrpIGe_RWCVbE" alt="Profile placeholder. Replace this image with your headshot." loading="lazy">
+                            <span class="hero-photo-shimmer shimmer-a" aria-hidden="true"></span>
+                            <span class="hero-photo-shimmer shimmer-b" aria-hidden="true"></span>
+                            <span class="hero-photo-shimmer shimmer-c" aria-hidden="true"></span>
+                        </figure>
                     </div>
                 </div>
         </section>
@@ -177,8 +187,8 @@ body{
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(1200px 700px at 20% 10%, rgba(var(--accent), .12), transparent 55%),
-    radial-gradient(900px 600px at 85% 25%, rgba(var(--accent2), .10), transparent 55%),
+    radial-gradient(1200px 700px at 20% 10%, rgba(var(--accent), .06), transparent 55%),
+    radial-gradient(900px 600px at 85% 25%, rgba(var(--accent2), .08), transparent 55%),
     radial-gradient(1000px 700px at 50% 120%, rgba(120,255,200,.08), transparent 60%),
     linear-gradient(180deg, var(--bg), var(--bg2));
   overflow-x:hidden;
@@ -222,7 +232,7 @@ header .container{
 .logo{
   font-weight: 700;
   letter-spacing: -0.02em;
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   color: var(--text);
 }
 
@@ -258,28 +268,110 @@ nav a:hover{
   position: relative;
 }
 
+.hero::before{
+  content:"";
+  position:absolute;
+  inset: 3% 0 8%;
+  background:
+    radial-gradient(560px 260px at 17% 30%, rgba(var(--accent), .08), transparent 72%),
+    radial-gradient(620px 300px at 82% 42%, rgba(120, 255, 200, .06), transparent 74%);
+  pointer-events:none;
+}
+
 .hero .container{
   padding: clamp(2.5rem, 5.5vw, 4.5rem);
-  border-radius: calc(var(--r) + 6px);
-  background:
-    radial-gradient(1200px 600px at 20% 10%, rgba(255,255,255,.08), transparent 55%),
-    radial-gradient(900px 500px at 80% 30%, rgba(var(--accent), .14), transparent 55%),
-    rgba(10, 12, 18, 0.72);
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 20px 80px rgba(0,0,0,.45);
-  backdrop-filter: blur(12px);
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-shell{
+  display:grid;
+  grid-template-columns: 1.1fr minmax(260px, .9fr);
+  align-items:center;
+  gap: clamp(1.1rem, 2.5vw, 2.2rem);
+  min-height: min(68vh, 700px);
+}
+
+.hero-visual{
+  position:relative;
+  min-height: 400px;
+  display:grid;
+  place-items:center;
+  --photo-size: min(100%, 320px);
+}
+
+
+
+.hero-photo-sculpt{
+  margin:0;
+  width: var(--photo-size);
+  position:relative;
+  z-index: 2;
+  border-radius: 50%;
+  overflow:visible;
+  border: 2px solid rgba(var(--accent), .42);
+  box-shadow: 0 18px 42px rgba(4, 11, 18, .52);
+}
+
+.hero-photo-shimmer{
+  position:absolute;
+  inset: -1px;
+  border-radius: 50%;
+  z-index: 3;
+  pointer-events:none;
+}
+
+.hero-photo-shimmer.shimmer-a{
+  box-shadow: 12px 0px 20px rgba(177, 96, 243, 0.2),
+  -6px 6px 20px rgba(156, 102, 255, 0.2),
+  3px -3px 20px rgba(121, 107, 250, 0.2);
+  animation: auroraShimmerA 7s linear infinite;
+}
+
+.hero-photo-shimmer.shimmer-b{
+  box-shadow: 12px 0px 9px rgba(120, 145, 255, 0.1),
+  -6px 6px 9px rgba(113, 191, 255, 0.1),
+  3px -3px 9px rgba(120, 224, 255, 0.1);
+  animation: auroraShimmerB 12s linear infinite;
+}
+
+.hero-photo-shimmer.shimmer-c{
+  box-shadow: 9px 0px 6px rgba(114, 238, 166, 0.08),
+  -6px 6px 6px rgba(120, 255, 210, 0.08),
+  3px -3px 6px rgba(120, 255, 226, 0.1);
+  animation: auroraShimmerC 10s linear infinite;
+}
+
+.hero-photo-sculpt img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  border-radius: 50%;
+  filter: saturate(1.04) contrast(1.03);
 }
 
 .hero h1{
-  margin:0 0 .5rem;
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin:0 0 .65rem;
+  font-size: clamp(2.4rem, 5.4vw, 4.15rem);
+  line-height: .98;
   letter-spacing: -0.03em;
+  text-wrap: balance;
 }
+
+.hero h1 span{
+  background: linear-gradient(120deg, rgba(120, 255, 200, .98), rgba(var(--accent), .95), rgba(var(--accent2), .9));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .hero h2{
   margin:0 0 1rem;
-  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
-  color: rgba(255,255,255,.72);
+  font-size: clamp(1.05rem, 1.9vw, 1.42rem);
+  color: rgba(230,245,255,.78);
   font-weight: 600;
+  letter-spacing: .01em;
 }
 .hero p{
   margin:0 0 1.6rem;
@@ -287,6 +379,7 @@ nav a:hover{
   max-width: 55ch;
   line-height: 1.55;
 }
+
 
 .button-container{
   display:flex;
@@ -335,6 +428,75 @@ button:hover{
   background: linear-gradient(135deg,
     rgba(var(--accent), .42),
     rgba(var(--accent2), .22));
+}
+
+@media (max-width: 900px){
+  .hero-shell{
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual{
+    width: 100%;
+    min-height: 320px;
+  }
+
+  .hero-tagline{
+    max-width: none;
+  }
+}
+
+@keyframes auroraShimmerA{
+  0%{
+    transform: rotate(45deg);
+    opacity: .52;
+  }
+  50%{
+    transform: rotate(225deg);
+    opacity: .9;
+  }
+  100%{
+    transform: rotate(405deg);
+    opacity: .52;
+  }
+}
+
+@keyframes auroraShimmerB{
+  0%{
+    transform: rotate(0deg);
+    opacity: .4;
+  }
+  50%{
+    transform: rotate(-180deg);
+    opacity: .7;
+  }
+  100%{
+    transform: rotate(-360deg);
+    opacity: .4;
+  }
+}
+
+@keyframes auroraShimmerC{
+  0%{
+    transform: rotate(0deg);
+    opacity: .52;
+  }
+  50%{
+    transform: rotate(180deg);
+    opacity: .84;
+  }
+  100%{
+    transform: rotate(360deg);
+    opacity: .52;
+  }
+}
+
+@keyframes auroraPulse{
+  0%, 100%{
+    opacity: .25;
+  }
+  50%{
+    opacity: .65;
+  }
 }
 
 /* ---------- Section headings ---------- */

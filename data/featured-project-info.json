@@ -1,7 +1,7 @@
 [
   {
     "title": "Neural Traffic Counter",
-    "img": "../data/images/img1.png",
+    "img": "../data/images/Car_Counter.png",
     "description": "YOLO-based system that detects and counts vehicles in real time from roadside cameras.",
     "category": ["AI", "web"]
   },

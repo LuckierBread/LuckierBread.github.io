@@ -1,11 +1,16 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js";
 
+      const container = document.getElementById("shader-bg");
+      if (!container) {
+        throw new Error('Missing "#shader-bg" container.');
+      }
+
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       const scene = new THREE.Scene();
 
       // Fullscreen quad camera
       const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
 
-      const container = document.getElementById("shader-bg")
       const renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       container.appendChild(renderer.domElement);
@@ -106,9 +111,29 @@ import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.m
       resize();
 
       const clock = new THREE.Clock();
+      let rafId = 0;
+
       function animate() {
+        if (document.hidden) {
+          rafId = requestAnimationFrame(animate);
+          return;
+        }
+
         material.uniforms.iTime.value = clock.getElapsedTime();
         renderer.render(scene, camera);
-        requestAnimationFrame(animate);
+        rafId = requestAnimationFrame(animate);
       }
-      animate();
+
+      function stop() {
+        if (rafId) cancelAnimationFrame(rafId);
+        window.removeEventListener("resize", resize);
+        renderer.dispose();
+      }
+
+      window.addEventListener("beforeunload", stop);
+
+      if (!prefersReducedMotion) {
+        animate();
+      } else {
+        renderer.render(scene, camera);
+      }

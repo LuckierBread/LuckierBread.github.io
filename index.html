@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Michael Ursuliak</title>
         <link rel="preconnect" href="https://rsms.me/">
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-        <!-- <link rel="stylesheet" href="styles/main.css"> -->
     </head>
 
     <body>
@@ -12,9 +13,9 @@
         <header>
             <div class="container">
             <div class="logo">Michael Ursuliak</div>
-                <nav>
+                <nav aria-label="Primary navigation">
                     <ul>
-                        <li><div></div><a href="#home">HOME</a></li>
+                        <li><a href="#home">HOME</a></li>
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#projects">PROJECTS</a></li>
                         <li><a href="#contact">CONTACT</a></li>
@@ -22,6 +23,7 @@
                 </nav>
             </div>
         </header>
+        <main>
         <section id="home" class="hero">
                 <div class="container hero-shell">
                     <div class="hero-copy">
@@ -29,8 +31,8 @@
                         <h2>Systems Engineering</h2>
                         <p>Turning new ideas into new realities.</p>
                         <div class="button-container">
-                            <a class="hero-porjects-CTA" href="#projects">View My Work</a>
-                            <a class="hero-contact-CTA" href="#contact">Get In Touch</a>
+                            <a class="hero-projects-cta" href="#projects">View My Work</a>
+                            <a class="hero-contact-cta" href="#contact">Get In Touch</a>
                         </div>
                     </div>
                     <div class="hero-visual">
@@ -81,6 +83,7 @@
                     </svg>
                     <h1>AI & Machine Learning</h1>
                     <p>I design and integrate powerful AI systems that become high value features in your products. From training custom models to deploying production ready inference pipelines. I turn machine vision, language models, and intelligent agents into tools that elevate product capabilities.
+                    </p>
                 </div>
                 <div class="card">
                     <!-- robot svg -->
@@ -98,17 +101,18 @@
                     <p>I build interconnected systems that bring software into the physical world. From embedded controllers
                     and sensor networks to real-time telemetry and remote operation, I design robotics platforms that move,
                     respond, and operate autonomously.
+                    </p>
                 </div>
             </div>
         </section>
         <hr>
-        <section id ="projects" class="container projects-showcase">
+        <section id="projects" class="container projects-showcase">
             <div class="projects-layout">
               <!-- Left -->
               <div class="projects-text">
                   <h1>CHECK OUT MY FEATURED PROJECTS</h1>
                   <p>
-                  Have I caught you're attention yet? Check out they rest of my projects.
+                  Have I caught your attention yet? Check out the rest of my projects.
                   </p>
                   <a href="projects.html" class="btn">Explore All Projects</a>
               </div>
@@ -124,12 +128,12 @@
                     <h1>Get in touch</h1>
                     <p>Interested in collaborating or have a question?<br>Feel free to reach out.</p>
                     <div class="contact-points">
-                      <a class="contact-point" href="mailto:you@example.com">
+                      <a class="contact-point" href="mailto:Michael.Ursu@outlook.com">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m3 8 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
                         <span>Email</span>
                         <strong>Michael.Ursu@outlook.com</strong>
                       </a>
-                      <a class="contact-point" href="tel:+15551234567">
+                      <a class="contact-point" href="tel:+17805543033">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2h3.3l1.2 5-2 1.9a16 16 0 0 0 6 6l1.9-2 5 1.2v3.3c0 1.1-.9 2-2 2C10.6 19.4 4.6 13.4 4.6 6c0-1.1.9-2 2-2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
                         <span>Phone</span>
                         <strong>+1 (780) 554-3033</strong>
@@ -152,16 +156,17 @@
                     </div>
                 </div>
                 <form class="contact-form" action="https://formspree.io/f/xwvndnwp" method="POST">
-                    <label>Name:</label>
-                      <input type="text" name="name" placeholder="Your Name">
-                    <label>Email:</label>
-                      <input type="email" name="email" required placeholder="Your@Email.com">
-                    <label>Message:</label>
-                      <textarea name="message" rows="5" required placeholder="Your Message"></textarea>
-                    <button class="hero-projects-CTA" type="submit">Send Message</button>
+                    <label for="contact-name">Name:</label>
+                      <input id="contact-name" type="text" name="name" required placeholder="Your Name">
+                    <label for="contact-email">Email:</label>
+                      <input id="contact-email" type="email" name="email" required placeholder="Your@Email.com">
+                    <label for="contact-message">Message:</label>
+                      <textarea id="contact-message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                    <button class="hero-projects-cta contact-submit-btn" type="submit">Send Message</button>
                 </form>
             </div>
         </section>
+        </main>
 
         <footer>
             <div class="footer-inner">
@@ -182,9 +187,9 @@
                     <div class="footer-group">
                         <h4>Project Areas</h4>
                         <div class="branch">
-                            <a class="node" href="projects.html#">WEB</a>
-                            <a class="node" href="projects.html#projects">ROBOTICS</a>
-                            <a class="node" href="projects.html#contact">AI & MACHINE LEARNING</a>
+                            <a class="node" href="projects.html">WEB</a>
+                            <a class="node" href="projects.html">ROBOTICS</a>
+                            <a class="node" href="projects.html">AI & MACHINE LEARNING</a>
                         </div>
                     </div>
                 </nav>
@@ -197,8 +202,10 @@
 :root{
   --bg: #070a12;
   --bg2:#0b1220;
-  --text: rgba(255,255,255,.92);
-  --muted: rgba(255,255,255,.68);
+  --text: rgba(245,250,255,.94);
+  --text-soft: rgba(245,250,255,.82);
+  --muted: rgba(245,250,255,.70);
+  --text-faint: rgba(245,250,255,.58);
 
   --card: rgba(255,255,255,.06);
   --card2: rgba(255,255,255,.04);
@@ -287,7 +294,7 @@ nav a{
   padding: .55rem .8rem;
   border-radius: 999px;
   text-decoration:none;
-  color: rgba(255,255,255,.78);
+  color: var(--text-soft);
   border: 1px solid transparent;
   transition: background .2s ease, border-color .2s ease, transform .2s ease;
 }
@@ -296,6 +303,20 @@ nav a:hover{
   background: rgba(255,255,255,.06);
   border-color: rgba(255,255,255,.10);
   transform: translateY(-1px);
+}
+
+header nav a[href="#contact"]{
+  border-color: rgba(var(--accent2), .45);
+  background: linear-gradient(135deg, rgba(var(--accent), .14), rgba(var(--accent2), .16));
+}
+
+nav a:focus-visible,
+.hero-projects-cta:focus-visible,
+.hero-contact-cta:focus-visible,
+.btn:focus-visible,
+button:focus-visible{
+  outline: 2px solid rgba(var(--accent2), .84);
+  outline-offset: 2px;
 }
 
 /* ---------- Hero ---------- */
@@ -335,8 +356,6 @@ nav a:hover{
   place-items:center;
   --photo-size: min(100%, 320px);
 }
-
-
 
 .hero-photo-sculpt{
   margin:0;
@@ -406,7 +425,7 @@ nav a:hover{
 .hero h2{
   margin:0 0 1rem;
   font-size: clamp(1.05rem, 1.9vw, 1.42rem);
-  color: rgba(230,245,255,.78);
+  color: var(--text-soft);
   font-weight: 600;
   letter-spacing: .01em;
 }
@@ -424,8 +443,8 @@ nav a:hover{
   gap: .9rem;
 }
 
-.hero-porjects-CTA,
-.hero-contact-CTA,
+.hero-projects-cta,
+.hero-contact-cta,
 .btn,
 button{
   cursor:pointer;
@@ -444,8 +463,8 @@ button{
   transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
 }
 
-.hero-porjects-CTA:hover,
-.hero-contact-CTA:hover,
+.hero-projects-cta:hover,
+.hero-contact-cta:hover,
 .btn:hover,
 button:hover{
   transform: translateY(-2px);
@@ -455,16 +474,26 @@ button:hover{
 }
 
 /* Make one CTA “primary” without changing your HTML */
-.hero-projects-CTA{
+.hero-projects-cta{
+  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.2);
+}
+.hero-projects-cta:hover{
+  background: rgba(255,255,255,.09);
+}
+
+.hero-contact-cta{
   background: linear-gradient(135deg,
     rgba(var(--accent), .32),
-    rgba(var(--accent2), .16));
-  border-color: rgba(var(--accent), .45);
+    rgba(var(--accent2), .36));
+  border-color: rgba(var(--accent2), .54);
+  box-shadow: 0 0 0 0 rgba(var(--accent2), .34);
+  animation: contactPulse 2.4s ease-in-out infinite;
 }
-.hero-projects-CTA:hover{
+.hero-contact-cta:hover{
   background: linear-gradient(135deg,
-    rgba(var(--accent), .42),
-    rgba(var(--accent2), .22));
+    rgba(var(--accent), .44),
+    rgba(var(--accent2), .52));
 }
 
 @media (max-width: 900px){
@@ -473,8 +502,17 @@ button:hover{
   }
 
   .hero-visual{
+    order: -1;
     width: 100%;
     min-height: 320px;
+  }
+
+  .hero-copy{
+    text-align: center;
+  }
+
+  .button-container{
+    justify-content: center;
   }
 }
 
@@ -570,6 +608,21 @@ hr{
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+@keyframes contactPulse{
+  0%, 100%{
+    box-shadow: 0 0 0 0 rgba(120, 255, 200, .42);
+  }
+  50%{
+    box-shadow: 0 0 0 12px rgba(120, 255, 200, 0);
+  }
+}
+
+@media (max-width: 700px){
+  .card-container{
+    grid-template-columns: 1fr;
+  }
+}
+
 .card{
   position:relative;
   padding: 1.4rem 1.3rem;
@@ -611,7 +664,7 @@ hr{
 .icon{
   width: 56px;
   height: 56px;
-  color: rgba(255,255,255,.88);
+  color: var(--text-soft);
   fill: currentColor; /* your first/third icons use fill */
   stroke: currentColor;
   filter: drop-shadow(0 10px 24px rgba(0,0,0,.4));
@@ -673,6 +726,7 @@ hr{
   gap:.8rem;
   padding:.3rem;
   min-height: 430px;
+  overflow: hidden;
 }
 
 .accordion-item{
@@ -680,6 +734,8 @@ hr{
   height: 430px;
   flex: 0 0 68px;
   cursor:pointer;
+  padding: 0;
+  background: transparent;
   transition: flex .45s ease, transform .18s ease, border-color .18s ease, box-shadow .2s ease;
   flex-shrink:0;
   border-radius: 18px;
@@ -760,7 +816,7 @@ hr{
 
 .caption{
   position:absolute;
-  color: rgba(247, 253, 255, .96);
+  color: var(--text);
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: .02em;
@@ -780,6 +836,11 @@ hr{
   bottom: 1.2rem;
   left: 1.2rem;
   transform: rotate(0deg);
+}
+
+.accordion-item:focus-visible{
+  outline: 2px solid rgba(120, 255, 200, .9);
+  outline-offset: 3px;
 }
 
 @media (max-width: 900px){
@@ -806,9 +867,38 @@ hr{
     flex-basis: 54px;
   }
 }
+
+@media (max-width: 700px){
+  header{
+    height: auto;
+    min-height: var(--nav-h);
+    padding: .6rem 0;
+  }
+
+  header .container{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .65rem;
+  }
+
+  .logo{
+    font-size: 1.2rem;
+  }
+
+  nav ul{
+    flex-wrap: wrap;
+    gap: .4rem;
+  }
+
+  nav a{
+    padding: .44rem .68rem;
+    font-size: .86rem;
+  }
+}
 /* ---------- Contact ---------- */
 .contact-section{
   padding: 1rem 0 4rem;
+  position: relative;
 }
 .contact-grid{
   width: min(var(--max), 92vw);
@@ -820,8 +910,11 @@ hr{
   padding: 1.8rem;
   border-radius: var(--r);
   background: linear-gradient(180deg, var(--card), var(--card2));
-  border: 1px solid var(--border);
-  box-shadow: 0 14px 50px rgba(0,0,0,.35);
+  border: 1px solid rgba(var(--accent), .34);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.42),
+    0 0 0 1px rgba(var(--accent), .18),
+    0 0 38px rgba(var(--accent), .18);
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
@@ -832,8 +925,19 @@ hr{
   position:absolute;
   inset:-1px;
   border-radius: inherit;
-  background: radial-gradient(600px 220px at 16% 0%, rgba(var(--accent), .18), transparent 55%);
+  background:
+    radial-gradient(620px 220px at 16% 0%, rgba(var(--accent), .24), transparent 55%),
+    radial-gradient(520px 180px at 100% 100%, rgba(var(--accent2), .16), transparent 60%);
   opacity:.9;
+  pointer-events:none;
+}
+
+.contact-grid::after{
+  content:"";
+  position:absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16);
   pointer-events:none;
 }
 
@@ -855,7 +959,7 @@ hr{
   margin:0;
   padding:.66rem .1rem;
   border-bottom: 1px solid rgba(255,255,255,.08);
-  color: rgba(240,250,255,.88);
+  color: var(--text-soft);
   text-decoration:none;
   display:grid;
   grid-template-columns: 20px auto;
@@ -880,14 +984,14 @@ hr{
   font-size:.74rem;
   letter-spacing:.05em;
   text-transform: uppercase;
-  color: rgba(200,226,255,.64);
+  color: var(--text-faint);
 }
 
 .contact-point strong{
   grid-area: value;
   font-size: .94rem;
   font-weight: 550;
-  color: rgba(240,250,255,.9);
+  color: var(--text);
 }
 
 .contact-points a.contact-point:hover{
@@ -895,7 +999,7 @@ hr{
 }
 
 .contact-points a.contact-point:hover svg{
-  color: rgba(120, 255, 200, .95);
+  color: rgba(var(--accent2), .92);
 }
 
 .contact-form{
@@ -908,8 +1012,36 @@ hr{
   background: rgba(10,12,18,.35);
 }
 
+.contact-form .contact-submit-btn{
+  margin-top: .45rem;
+  width: 100%;
+  min-height: 48px;
+  font-size: .98rem;
+  letter-spacing: .02em;
+  border-color: rgba(var(--accent2), .62);
+  background: linear-gradient(135deg,
+    rgba(var(--accent), .38),
+    rgba(var(--accent2), .42));
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.34),
+    0 0 0 0 rgba(var(--accent2), .32);
+  animation: contactPulse 2.2s ease-in-out infinite;
+}
+
+.contact-form .contact-submit-btn:hover{
+  background: linear-gradient(135deg,
+    rgba(var(--accent), .50),
+    rgba(var(--accent2), .56));
+  border-color: rgba(var(--accent2), .86);
+}
+
+.contact-form .contact-submit-btn:focus-visible{
+  outline: 2px solid rgba(var(--accent2), .9);
+  outline-offset: 3px;
+}
+
 .contact-form label{
-  color: rgba(255,255,255,.9);
+  color: var(--text-soft);
   font-size: .9rem;
 }
 
@@ -958,13 +1090,13 @@ footer{
 .footer-intro h3{
   margin:0;
   font-size: 1rem;
-  color: rgba(255,255,255,.9);
+  color: var(--text);
   letter-spacing: .01em;
 }
 
 .footer-intro p{
   margin: .35rem 0 0;
-  color: rgba(255,255,255,.52);
+  color: var(--text-faint);
   font-size: .88rem;
 }
 
@@ -993,16 +1125,16 @@ footer{
 }
 
 .site-map a{
-  color: rgba(255,255,255,.68);
+  color: var(--muted);
   text-decoration:none;
   font-size: .86rem;
 }
-.site-map a:hover{ color: rgba(255,255,255,.86); }
+.site-map a:hover{ color: var(--text-soft); }
 
 .footer-copy{
   width: min(var(--max), 92vw);
   margin: 0 auto;
-  color: rgba(255,255,255,.48);
+  color: var(--text-faint);
   font-size: .82rem;
   border-top: 1px solid rgba(255,255,255,.08);
   padding-top: .8rem;
@@ -1016,6 +1148,15 @@ footer{
 
   .site-map{
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
